@@ -3,7 +3,10 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     beautify = require('gulp-jsbeautifier');
 
-var src_files = './**/*.js';
+var src_files = [
+    './**/*.js',
+    '!./node_modules/**'
+];
 
 gulp.task('default', ['watch']);
 
