@@ -1,26 +1,10 @@
 var express = require('express'),
-    router = express.Router();
+    router = express.Router(),
+    personnelController = require("../controllers/personnel");
 
 //Base: /api/personnel/
 router.route('/personnel')
-    .get(function(request, response) {
-        var mock = {
-            users: [{
-                id: 1,
-                givenName: "James",
-                middleName: "Tiberius",
-                familyName: "Kirk",
-                rank: "Captain"
-            }, {
-                id: 2,
-                givenName: "Geordi",
-                middleName: "",
-                familyName: "La Forge",
-                rank: "Lt. Commander"
-            }]
-        };
-
-        response.json(mock);
-    });
+    .get(personnelController.getPersonnel)
+    .post(personnelController.postPerson);
 
 module.exports = router;

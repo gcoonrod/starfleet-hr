@@ -1,6 +1,9 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
+    mongoose = require('mongoose');
     apiRouter = require('./routers/api');
+
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/starfleet-hr');
 
 var app = express();
 
