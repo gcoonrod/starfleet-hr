@@ -1,26 +1,13 @@
 var express = require('express'),
-    router = express.Router();
+    router = express.Router(),
+    divisionController = require('../controllers/division');
 
 //Base: /api/division/
 router.route('/divisions')
-    .get(function(request, response) {
-        var mock = {
-            divisions: [{
-                id: 1,
-                name: "Command",
-                short: "CMD"
-            }, {
-                id: 2,
-                name: "Operations",
-                short: "OPS"
-            }, {
-                id: 3,
-                name: "Sciences",
-                short: "SCI"
-            }]
-        };
+    .get(divisionController.getDivisions)
+    .post(divisionController.postDivision);
 
-        response.json(mock);
-    });
+router.route('/divisions/:division_id')
+    .get(divisionController.getDivision);
 
 module.exports = router;
