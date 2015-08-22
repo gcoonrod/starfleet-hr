@@ -1,0 +1,22 @@
+{
+  "name": "starfleet-hr",
+  "version": "1.0.0",
+  "description": "HR Database for Starfleet",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcoonrod/starfleet-hr.git"
+  },
+  "author": "greg.coonrod@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gcoonrod/starfleet-hr/issues"
+  },
+  "homepage": "https://github.com/gcoonrod/starfleet-hr#readme"
+}
