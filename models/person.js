@@ -19,8 +19,14 @@ var PersonSchema = new mongoose.Schema({
     },
     division: {
         type: mongoose.Schema.Types.ObjectId,
+        ref: 'Division',
         required: false
-    }
+    },
+    groups: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Group",
+        required: false
+    }]
 });
 
 module.exports = mongoose.model("Person", PersonSchema);
